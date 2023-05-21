@@ -2,66 +2,78 @@
 <html>
 <head>
   <title>Kevin's Page</title>
+  <link rel="stylesheet" href="./style.css">
   <meta charset="UTF-8">
-  <meta name="description" content="This is my first web page.">
+  <meta name="description" content="The website for content about whatever.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f5f5f5;
-      color: #333;
+      background-color: #0c1821; /* Dark background color */
+      color: #ffffff; /* Light text color */
     }
 
     header {
-      background-color: #0074a8;
+      background-color: #001f29; /* Dark blue header background color */
       padding: 20px;
       text-align: center;
-      color: #fff;
+      color: #ffffff; /* Light text color */
     }
 
     nav ul {
       list-style-type: none;
       margin: 0;
       padding: 0;
-      background-color: #0074a8;
-      border-bottom: 1px solid #004c70;
+      background-color: #001f29; /* Dark blue navbar background color */
+      border-bottom: 1px solid #004c70; /* Light blue border color */
       overflow: hidden;
+      display: flex;
+      justify-content: center;
     }
 
     nav li {
-      float: left;
+      margin: 0 10px;
     }
 
     nav li a {
       display: block;
-      color: #fff;
+      color: #ffffff; /* Light text color */
       text-align: center;
       padding: 14px 16px;
       text-decoration: none;
     }
 
     nav li a:hover {
-      background-color: #004c70;
+      background-color: #004c70; /* Light blue hover background color */
     }
 
     main {
       margin: 20px;
-      background-color: #fff;
+      padding: 20px;
+    }
+
+    .about-me {
+      background-color: #02152b; /* Darker background color for "About Me" section */
+      padding: 20px;
+    }
+
+    .contact-info {
+      background-color: #002b48; /* Darker background color for "Contact Information" section */
       padding: 20px;
     }
 
     h1 {
       font-size: 36px;
       margin: 0;
-      color: #0074a8;
+      color: #0074a8; /* Light blue heading color */
     }
 
     h2 {
       font-size: 24px;
       margin: 0 0 10px;
-      color: #0074a8;
+      color: #0074a8; /* Light blue heading color */
     }
 
     p {
@@ -69,8 +81,8 @@
     }
 
     footer {
-      background-color: #0074a8;
-      color: #fff;
+      background-color: #001f29; /* Dark blue footer background color */
+      color: #ffffff; /* Light text color */
       padding: 20px;
       text-align: center;
       font-size: 14px;
@@ -79,31 +91,31 @@
 </head>
 <body>
   <header>
-    <h1>Welcome to My First Web Page</h1>
+    <h1>Tastiest Restaurants, the Website not About Restaurants</h1>
   </header>
 
   <nav>
     <ul>
-      <li><a href="./subsite/page1.html">Page 1</a></li>
-      <li><a href="./subsite/page2.html">Page 2</a></li>
-      <li><a href="./subsite/page3.html">Page 3</a></li>
+      <li><a href="./subsite/page1.html">Play</a></li>
+      <li><a href="./subsite/page2.html">Find</a></li>
+      <li><a href="./subsite/page3.html">Explore</a></li>
     </ul>
   </nav>
 
   <main>
-    <section>
+    <section class="about-me">
       <h2>About Me</h2>
-      <p>This is a paragraph about myself.</p>
+      <p>Welcome to Tastiest Restaurants, the website you now know isn't about restaurants at all. Why? Because this domain name was suprisingly avaliable, and I decided to take advantage of that and used it.</p>
     </section>
 
-    <section>
+    <section class="contact-info">
       <h2>Contact Information</h2>
-      <p>You can reach me at example@example.com.</p>
+      <p>Please don't contact me.</p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2023 My First Web Page. All rights reserved.</p>
+    <p>&copy; 2023 Tastiest Restaurants. I Don't Have Any Legal Ownership of the Name Tastiest Restaurants.</p>
   </footer>
 </body>
 </html>

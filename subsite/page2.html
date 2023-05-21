@@ -8,36 +8,125 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #0c1821; /* Dark background color */
+      color: #ffffff; /* Light text color */
     }
 
     a {
       text-decoration: none;
     }
 
-    h1 {
-      font-size: 24px;
-      margin: 0;
-      padding: 20px;
-      background-color: #0074a8;
-      color: #fff;
-    }
-
-    a {
-      display: block;
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #001f29; /* Dark blue navbar background color */
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       padding: 10px;
-      color: #0074a8;
     }
 
-    a:hover {
-      background-color: #004c70;
-      color: #fff;
+    .navbar h1 {
+      font-size: 20px;
+      margin: 0;
+      padding: 0;
+      color: #ffffff; /* Light text color */
+    }
+
+    .navbar a {
+      padding: 10px;
+      color: #a7b8c2; /* Light blue link color */
+    }
+
+    .navbar a:hover {
+      background-color: #004c70; /* Hover background color */
+      color: #ffffff; /* Light text color */
+    }
+
+    .image-container {
+      display: flex;
+      flex-direction: column; /* Updated to vertical layout */
+      align-items: flex-start; /* Updated to align images to the left */
+      margin-top: 60px; /* Adjust margin to prevent content from overlapping with the fixed navbar */
+    }
+
+    .image-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+
+    .image-wrapper img {
+      width: 500px; /* Updated width of the images */
+      height: auto; /* Adjusted height to maintain aspect ratio */
+      margin-left: 10px; /* Adjusted left margin to create spacing between images */
+      margin-bottom: 10px; /* Added bottom margin to create vertical spacing between images */
+      transition: transform 0.3s ease, opacity 0.3s ease; /* Added opacity transition */
+      opacity: 1; /* Initial opacity */
+    }
+
+    .image-wrapper img:hover {
+      transform: scale(1.1);
+      opacity: 0.7; /* Maximum opacity */
+    }
+
+    .image-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8); /* Dark background color for overlay */
+      color: #ffffff; /* Light text color */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: translateY(100%); /* Initial position below the image */
+      opacity: 0; /* Initial opacity */
+      transition: transform 0.3s ease, opacity 0.3s ease; /* Transition for transform and opacity */
+    }
+
+    .image-wrapper:hover .image-overlay {
+      transform: translateY(0); /* Move text overlay to normal position */
+      opacity: 1; /* Fade in the text overlay */
+    }
+
+    .image-overlay p {
+      margin: 0;
     }
   </style>
 </head>
 <body>
-  <a href="./../index.html"><h1>HOME</h1></a>
-  <a href="page1.html">Page 1</a>
-  <a href="page2.html">Page 2</a>
-  <a href="page3.html">Page 3</a>
+  <div class="navbar">
+    <a href="./../index.html"><h1>HOME</h1></a>
+    <div>
+      <a href="page1.html">Play</a>
+      <a href="page2.html">Find</a>
+      <a href="page3.html">Explore</a>
+    </div>
+  </div>
+  
+  <div class="image-container">
+    <div class="image-wrapper">
+      <img src="./moreimgs/pexels-ezra-comeau-2387418.jpg">
+      <div class="image-overlay">
+        <p>WHAT A GORGEOUS LAKESIDE VIEW</p>
+      </div>
+    </div>
+    <div class="image-wrapper">
+      <img src="./moreimgs/pexels-jaime-reimer-2662116.jpg">
+      <div class="image-overlay">
+        <p>OH WOW ANOTHER LAKESIDE VIEW</p>
+      </div>
+    </div>
+    <div class="image-wrapper">
+      <img src="./moreimgs/pexels-james-wheeler-1619317.jpg">
+      <div class="image-overlay">
+        <p>WHY ARE THERE SO MANY LAKESIDE VIEWS!?!?!?</p>
+      </div>
+    </div>
+    <!-- Add more images here -->
+  </div>
 </body>
 </html>
